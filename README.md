@@ -1,9 +1,21 @@
-#goterm
+# GoTerm
 
 A terminal application used to manage serial devices.
 
-Requirements:
-Golang
+This is using other packages
 
-To build:
+github.com/tarm/serial
+
+Requirements:
+
+Install Go Language.
+Go to https://golang.org/doc/ for installation instructions.
+
+Build:
+```
 $ go build goterm
+```
+
+Run:
+```
+$ ./goterm
