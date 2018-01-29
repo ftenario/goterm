@@ -64,8 +64,6 @@ func main() {
 
           //read until newline
           recv,_ := serial.ReadBytes('\x0a')
-          if len(string(recv)) > 0 {
-          }
           rxChan <- string(recv)
 
         }
@@ -77,7 +75,7 @@ func main() {
     fmt.Println("\n->")
 
     for {
-      //time.Sleep(50 * time.Millisecond)
+      time.Sleep(50 * time.Millisecond)
 
       select {
 
@@ -91,8 +89,6 @@ func main() {
 
         case <- time.After(4000 * time.Millisecond):
           fmt.Println("timeout\n")
-          //fmt.Println("\n->")
       }
-
     }
 }
