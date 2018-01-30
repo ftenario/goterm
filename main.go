@@ -81,10 +81,12 @@ func main() {
 
         case tx := <-input:
           txChan <- tx
+          //fmt.Printf("%d", len(tx))
 
         case r := <- rxChan:
           if len(r) > 0 {
             fmt.Printf("%s", r)
+            //fmt.Printf("\n%d\n", len(r))
           }
 
         case <- time.After(4000 * time.Millisecond):
